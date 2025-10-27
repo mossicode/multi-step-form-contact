@@ -35,10 +35,10 @@ export default function AddOns({ addOns, setAddOns, setActiveTab, isMonthly, set
   }, [selectedIds, data, setAddOns]);
 
   return (
-    <div className="flex flex-col max-md:min-h-[70vh]  h-full max-md:max-h-screen max-md:pb-20 justify-between relative">
+    <div className="flex flex-col max-md:min-h-[80vh]  h-full max-md:max-h-screen max-md:pb-20 justify-between relative">
       <div>
         <h1 className="text-2xl font-bold mb-2">Pick Add-Ons</h1>
-        <p className="text-gray-500 mb-6">Add-ons help enhance your experience.</p>
+        <p className="text-gray-500 mb-6">Add-ons help enhance your experience.1</p>
 
         <AddOnsCard addOnsData={data} checkHandle={handleCheck} selectedIds={selectedIds} />
       </div>
