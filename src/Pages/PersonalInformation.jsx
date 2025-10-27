@@ -21,7 +21,7 @@ export default function PersonalInformation({ setActiveTab, values, setValues, s
     else {
       const afghanPhoneRegex = /^07\d{8}$/;
       if (!afghanPhoneRegex.test(values.phoneNumber))
-        error.phoneNumber = "Invalid Afghan phone number (e.g. 0791234567)";
+        error.phoneNumber = "Invalid Afghan phone number (e.g. 0789976745)";
     }
 
     if (Object.keys(error).length) {
