@@ -28,22 +28,30 @@ export default function PersonalInformation({ setActiveTab, values, setValues, s
       setErrors(error);
     } else {
       setErrors({});
-      setSelectionPlanLock(false); 
+      setSelectionPlanLock(false);
       setActiveTab("selectionPlan");
     }
   }
 
   return (
-    <form onSubmit={submitHandler} className="flex flex-col gap-y-3 bg-red-300 relative max-md:pb-20 md:h-full h-dvh w-full">
-      <h1><Title>Personal Information</Title></h1>
-      <p className="text-gray-600">Please provide your name, email, and phone number</p>
+    <form
+      onSubmit={submitHandler}
+      className="flex flex-col gap-y-4 relative pb-24 max-md:min-h-[70vh] h-full bg-white w-full rounded-xl shadow-sm"
+    >
+      <div>
+        <Title>Personal Information</Title>
+        <p className="text-gray-600 mb-6">
+          Please provide your name, email, and phone number.
+        </p>
+      </div>
 
       <div>
         <div className="flex justify-between">
-          <label>Name</label> <span className="text-red-500 text-sm">{errors.firstName}</span>
+          <label className="font-medium text-gray-700">Name</label>
+          <span className="text-red-500 text-sm">{errors.firstName}</span>
         </div>
         <input
-          className="border p-3 mt-1.5 rounded-md w-full"
+          className="border p-3 mt-1.5 rounded-md w-full focus:outline-none focus:border-blue-500"
           type="text"
           name="firstName"
           placeholder="e.g. Stephen King"
@@ -54,10 +62,11 @@ export default function PersonalInformation({ setActiveTab, values, setValues, s
 
       <div>
         <div className="flex justify-between">
-          <label>Email</label> <span className="text-red-500 text-sm">{errors.email}</span>
+          <label className="font-medium text-gray-700">Email</label>
+          <span className="text-red-500 text-sm">{errors.email}</span>
         </div>
         <input
-          className="border p-3 mt-1.5 rounded-md w-full"
+          className="border p-3 mt-1.5 rounded-md w-full focus:outline-none focus:border-blue-500"
           type="email"
           name="email"
           placeholder="e.g. stephenking@lorem.com"
@@ -68,11 +77,11 @@ export default function PersonalInformation({ setActiveTab, values, setValues, s
 
       <div>
         <div className="flex justify-between">
-          <label>Phone Number</label>
+          <label className="font-medium text-gray-700">Phone Number</label>
           <span className="text-red-500 text-sm">{errors.phoneNumber}</span>
         </div>
         <input
-          className="border p-3 mt-1.5 rounded-md w-full"
+          className="border p-3 mt-1.5 rounded-md w-full focus:outline-none focus:border-blue-500"
           type="tel"
           name="phoneNumber"
           placeholder="e.g. 0791234567"
