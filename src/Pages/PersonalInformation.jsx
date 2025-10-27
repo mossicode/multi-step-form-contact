@@ -34,7 +34,7 @@ export default function PersonalInformation({ setActiveTab, values, setValues, s
   }
 
   return (
-    <form onSubmit={submitHandler} className="flex flex-col gap-y-3 relative max-md:pb-20 md:h-full h-dvh w-full">
+    <form onSubmit={submitHandler} className="flex flex-col gap-y-3 bg-red-300 relative max-md:pb-20 md:h-full h-dvh w-full">
       <h1><Title>Personal Information</Title></h1>
       <p className="text-gray-600">Please provide your name, email, and phone number</p>
 
